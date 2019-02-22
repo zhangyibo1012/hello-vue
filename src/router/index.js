@@ -9,6 +9,8 @@ import UserList from '../views/user/UserList';
 Vue.use(Router);
 
 export default new Router({
+  // 去掉请求路径的#号
+  mode: 'history',
   routes:[
     {
       // 首页 /main/:username 带参数
