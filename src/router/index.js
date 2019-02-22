@@ -4,6 +4,7 @@ import Login from '../views/Login';
 import Main from '../views/Main';
 import UserProfile from '../views/user/UserProfile';
 import UserList from '../views/user/UserList';
+import NotFound from '../views/error/NotFound';
 
 
 Vue.use(Router);
@@ -33,6 +34,11 @@ export default new Router({
     {
       path: '/goMain/:username',
       redirect: '/main/:username'
+    },
+    {
+      // 通配符
+      path: '*',
+      component: NotFound
     }
   ]
 });
