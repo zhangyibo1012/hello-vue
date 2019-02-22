@@ -7,6 +7,10 @@ import App from './App'
 import VueRouter from 'vue-router';
 import router from './router';
 
+// 全局的 放在main js 入口函数
+import axios from 'axios';
+
+Vue.prototype.axios = axios;
 Vue.use(VueRouter);
 Vue.use(ElementUI);
 
