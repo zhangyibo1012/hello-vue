@@ -42,7 +42,8 @@
               <el-dropdown-item>退出登陆</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
-          <span>张贻博</span>
+         <!--显示登陆form中的用户名参数-->
+          <span>{{ $route.params.username }}</span>
         </el-header>
 
         <el-main>

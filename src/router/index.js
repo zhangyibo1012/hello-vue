@@ -11,7 +11,8 @@ Vue.use(Router);
 export default new Router({
   routes:[
     {
-      path:'/main',
+      // 首页
+      path:'/main/:username',
       name:'Main',
       component: Main,
       // 子路由

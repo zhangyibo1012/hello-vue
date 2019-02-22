@@ -44,8 +44,9 @@
        onSubmit(formName) {
           this.$refs[formName].validate((valid) => {
             if (valid) {
-              // 跳转首页
-              this.$router.push("/main");
+              // 跳转首页 编程式导航 以代码方式跳转
+              // 把登陆form中的用户名传参
+              this.$router.push({name:'Main' , params:{username:this.form.username}});
             } else {
               this.$message.error('登陆信息输入错误');
               return false;
