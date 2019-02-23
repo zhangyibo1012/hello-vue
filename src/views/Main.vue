@@ -18,9 +18,9 @@
               <el-menu-item index="1-2">
                 <router-link to="/user/list">用户列表</router-link>
               </el-menu-item>
-              <el-menu-item index="1-3">
-                <router-link to="/goMain/Jake">回到首页</router-link>
-              </el-menu-item>
+              <!--<el-menu-item index="1-3">-->
+                <!--<router-link to="/goMain/Jake">回到首页</router-link>-->
+              <!--</el-menu-item>-->
             </el-menu-item-group>
           </el-submenu>
 
@@ -46,7 +46,7 @@
             </el-dropdown-menu>
           </el-dropdown>
          <!--显示登陆form中的用户名参数-->
-          <span>{{ $route.params.username }}</span>
+          <span>{{ $store.getters.getUser.username}}</span>
           <!--<span>张贻博</span>-->
         </el-header>
 

@@ -15,7 +15,7 @@ export default new Router({
   routes:[
     {
       // 首页 /main/:username 带参数
-      path:'/main/:username',
+      path:'/main',
       name:'Main',
       component: Main,
       // 子路由
@@ -31,10 +31,10 @@ export default new Router({
       component: Login
   },
     // 组件重订向 作用在路径不同但组件相同的情况下 传参数
-    {
-      path: '/goMain/:username',
-      redirect: '/main/:username'
-    },
+    // {
+    //   path: '/goMain/:username',
+    //   redirect: '/main/:username'
+    // },
     {
       // 通配符
       path: '*',

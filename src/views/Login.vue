@@ -44,6 +44,10 @@
        onSubmit(formName) {
           this.$refs[formName].validate((valid) => {
             if (valid) {
+              // 登陆成功 记录状态
+              sessionStorage.setItem('isLogin' , 'true');
+              // 存入 vuex  返给登陆对象 this.$store. 调用actions方法的
+              this.$store.dispatch('asyncUpdateUser',{username:this.form.username})
               // 跳转首页 编程式导航 以代码方式跳转
               // 把登陆form中的用户名传参
               this.$router.push({name:'Main' , params:{username:this.form.username}});
