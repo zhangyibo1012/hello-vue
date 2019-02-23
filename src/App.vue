@@ -16,7 +16,7 @@ export default {
   methods:{
     saveState(){
       // 只可以存字符串 JSON.stringify 把对象转换字符串
-      sessionStorage.setItem('state' , JSON.stringify(this.$store.state));
+      sessionStorage.setItem('userState' , JSON.stringify(this.$store.state.user));
     }
   }
 }
