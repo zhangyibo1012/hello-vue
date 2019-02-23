@@ -12,7 +12,7 @@
     export default {
       props:['id'],
         name: "UserProfile",
-      // 钩子函数异步请求
+      // 钩子函数异步请求 进入方法之前执行的
       beforeRouteEnter:((to, from, next) => {
         console.log("准备进入个人信息页面");
         // 进入页面 不写next()会阻塞
@@ -26,6 +26,7 @@
         getData: function () {
           this.axios({
             method: 'get',
+            // 跨域
             url:'http://localhost:8080/data.json'
           }).then(function (repos) {
             console.log(repos);
@@ -34,6 +35,7 @@
           })
         }
       },
+      // 离开的时候执行这个方法
       beforeRouteLeave:((to, from, next) => {
         console.log("准备离开个人信息页面");
         next();
